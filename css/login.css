@@ -1,0 +1,28 @@
+.background-pic{
+    background-image: url("../images/cover.jpg");
+    height:100vh;
+    background-position: center;
+    background-size:cover;
+    padding-bottom: 10px;
+}
+
+.center-me{
+    display: flex;
+    justify-content: center;
+
+}
+
+.form-signin{
+    padding:40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.login-logo{
+    height:100px;
+    width:100px;
+}
+
+input{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,52 @@
+.about {
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 0 0 15px;
+  background: rgba(204, 230, 255, 0.5);
+  font-family: monospace;
+}
+
+.h2-header{
+  margin-left:15px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.row{
+  background-color: rgb(145, 141, 141);
+  margin-bottom: 0;
+}
+
+.content{
+  margin: 50px;
+  background-color:white;
+  border-radius:10px;
+  padding:50px;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.content-title{
+  font-weight: bold;
+}
+
+.content-name{
+  font-weight: bold;
+}
+
+.content-paragraph{
+  padding: 0 75px 75px 0;
+}
+
+.content-img{
+  margin-right:35px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.company {
+  padding-bottom: 5px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 20px;
+}
