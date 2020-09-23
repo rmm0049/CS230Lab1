@@ -11,14 +11,14 @@ if (isset($_POST['signup-submit'])){
     $confirm_pwd = $_POST['con-pwd'];
 
     if ($password !== $confirm_pwd){
-        header("Location: ../singup.php?error=diffPasswords&fname=".$fname."&lname=".$lname."&uname".$username);
+        header("Location: ../signup.php?error=diffPasswords&fname=".$fname."&lname=".$lname."&uname".$username);
         exit();
     }
     else{
         $sql = "SELECT uname FROM users WHERE uname=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)){
-            header("Location: ../singup.php?error=SQLerror");
+            header("Location: ../signup.php?error=SQLerror");
             exit();
         }
         else{
@@ -28,7 +28,7 @@ if (isset($_POST['signup-submit'])){
             $check = mysqli_stmt_num_rows($stmt);
 
             if ($check > 0){
-                header("Location: ../singup.php?error=UsernameTaken");
+                header("Location: ../signup.php?error=UsernameTaken");
                 exit();
             }
 
@@ -36,7 +36,7 @@ if (isset($_POST['signup-submit'])){
                 $sql = "INSERT INTO users (lname, fname, email, uname, password) VALUES (?,?,?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)){
-                    header("Location: ../singup.php?error=SQLerror");
+                    header("Location: ../signup.php?error=SQLerror");
                     exit();
                 }
                 else{
@@ -56,6 +56,6 @@ if (isset($_POST['signup-submit'])){
     }
 }
 else{
-    header("Location: ../singup.php");
+    header("Location: ../signup.php");
     exit();
 }
