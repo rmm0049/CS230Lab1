@@ -36,6 +36,13 @@ if (isset($_POST['login-submit'])){
                $_SESSION['fname'] = $data['fname'];
                $_SESSION['username'] = $data['uname'];
 
+
+            
+               if ($uname_email == "Admin"){
+                    header("Location: ../admin.php?login=success");
+                    exit();
+               }
+
                header("Location: ../profile.php?login=success");
                 exit();
 

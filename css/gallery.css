@@ -1,0 +1,50 @@
+h1 {
+    font-family: monospace;
+    text-align: center;
+}
+
+h3{
+   color:black;
+}
+
+p{
+    color:black;
+}
+
+img{
+    max-width: 220px;
+    height: 220px;
+    margin-top:10px;
+}
+
+.gallery-container{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(204, 230, 255, 0.5);
+}
+
+.card {
+  background-color: rgb(185, 185, 185);
+  margin:10px;
+  width:33%;
+  max-width: 280px;
+  height:auto;
+  border-radius: 10px;
+  padding:5px;
+  font-family: monospace;
+
+}
+.gallery-container a{
+    text-decoration: none;
+    background-size: cover;
+}
+
+.gallery-container a:hover{
+    text-decoration: none;
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 75%;
+}

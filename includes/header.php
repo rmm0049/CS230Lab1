@@ -19,11 +19,11 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="../css/signup.css">
-
+    <link rel="icon" href="../images/meallife.png">
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img style="height: 50px; width: 50px" src="/images/meallife.png" /></a>
+        <a class="navbar-brand" href="signup.php"><img style="height: 50px; width: 50px" src="/images/meallife.png" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,9 +46,15 @@ session_start();
                 </li>
                 <?php
                 if (isset($_SESSION['uid'])) {
-                    echo '<li class="nav-item">
-                             <a class="nav-link" href="../profile.php">Profile</a>
-                              </li>';
+                    if ($_SESSION['uid'] != 0){
+                        echo '<li class="nav-item">
+                                <a class="nav-link" href="../profile.php">Profile</a>
+                                </li>';
+                    }else{
+                        echo '<li class="nav-item">
+                                <a class="nav-link" href="../admin.php">Admin Page</a>
+                                </li>';
+                    }
                 }
                 ?>
                 <li class="nav-item dropdown">
@@ -56,7 +62,7 @@ session_start();
                         Products
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Meal Kits</a>
+                        <a class="dropdown-item" href="gallery.php">Meal Kits</a>
                         <a class="dropdown-item" href="#">Plans</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Reviews</a>
