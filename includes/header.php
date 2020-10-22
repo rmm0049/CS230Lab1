@@ -18,6 +18,9 @@ session_start();
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/0809ee8fa6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="icon" href="../images/meallife.png">
 </head>
@@ -46,11 +49,11 @@ session_start();
                 </li>
                 <?php
                 if (isset($_SESSION['uid'])) {
-                    if ($_SESSION['uid'] != 0){
+                    if ($_SESSION['uid'] != 0) {
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../profile.php">Profile</a>
                                 </li>';
-                    }else{
+                    } else {
                         echo '<li class="nav-item">
                                 <a class="nav-link" href="../admin.php">Admin Page</a>
                                 </li>';

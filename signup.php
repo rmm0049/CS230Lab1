@@ -38,7 +38,12 @@ require "includes/header.php"
                     
                     </form>
                     <div class="text-center">
-                        <p>Already have an account? <a href="login.php">Sign In</a></p>
+                        <?php
+                        if (isset($_SESSION['uid']))
+                            echo "<p>Already have an account? <a href=\"profile.php\">Sign in</a></p>";
+                        else
+                             echo "<p>Already have an account? <a href=\"login.php\">Sign In</a></p>";
+                        ?>    
                     </div>
                 </div>
             </div>
